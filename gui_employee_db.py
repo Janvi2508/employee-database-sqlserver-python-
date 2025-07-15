@@ -32,11 +32,11 @@ def fetch_data():
 
         update_treeview(df_data)
         update_department_filter()
-        status_label.config(text=f"✅ Connected to SQL Server at IP: {server_ip}", fg="green")
+        status_label.config(text=f" Connected to SQL Server at IP: {server_ip}", fg="green")
 
     except Exception as e:
-        messagebox.showerror("Connection Error", f"❌ Failed to connect:\n{e}")
-        status_label.config(text="❌ Connection failed.", fg="red")
+        messagebox.showerror("Connection Error", f" Failed to connect:\n{e}")
+        status_label.config(text=" Connection failed.", fg="red")
 
 def update_treeview(df):
     for row in tree.get_children():
