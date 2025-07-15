@@ -19,7 +19,7 @@ def connect_to_sql_server():
             f'PWD={password}'
         )
         conn = pyodbc.connect(connection_string)
-        print(f"✅ Connection successful. Connected to SQL Server at IP: {server_ip}")
+        print(f" Connection successful. Connected to SQL Server at IP: {server_ip}")
 
         # Query first 5 employees
         query = "SELECT TOP 5 * FROM Employees"
@@ -28,7 +28,7 @@ def connect_to_sql_server():
         print(df)
 
     except Exception as e:
-        print("❌ Connection failed:")
+        print(" Connection failed:")
         print(e)
 
     finally:
